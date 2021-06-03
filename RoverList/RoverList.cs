@@ -8,43 +8,106 @@ namespace RoverList
 {
     public class RoverList<T> : RoverListBase<T>
     {
-        // Add any variables you need here
+        public int count;
         
         public RoverList ()
         {
-
+            count = 0;
         }
 
-        public override int Count => throw new NotImplementedException();
+        public override int Count
+        {
+            get
+            {
+                return count;
+            }
+        }
 
         public override void Add(T data)
         {
-            throw new NotImplementedException();
+            Node n = new RoverListBase<T>.Node(data);
+
+            if (head == null)
+            {
+                head = n;
+                count++;
+            }
+            else
+            {
+                head.Next = n;
+                count++;
+            }
+
         }
 
         public override void Add(int Position, T data)
         {
-            throw new NotImplementedException();
+            if (Position < 0 || Position >= count)
+                throw new IndexOutOfRangeException();
+
+            Node newNode = new Node(data);
+
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                if (Position == 0)
+                {
+                    newNode.Next = head;
+                    head.Next = newNode;
+                    head = newNode;
+                }
+                
+
+            }
         }
+
 
         public override void Clear()
         {
-            throw new NotImplementedException();
+            head = null;
         }
+
+
 
         public override T ElementAt(int Position)
         {
-            throw new NotImplementedException();
+            current = head;
+            int pos = 0;
+            while (pos != Position && current != null)
+            {
+                pos++;
+                current = head.Next;
+            }
+            if (current != null && pos == Position)
+                return current.Data;
+            else
+                return default(T); 
         }
 
         public override void ListNodes()
         {
-            throw new NotImplementedException();
+            current = head;
+            while (current != null)
+            {
+                Console.WriteLine(current.Data);
+                current = current.Next;
+            }
         }
 
         public override bool RemoveAt(int Position)
         {
-            throw new NotImplementedException();
+            bool removed = false;
+            if (Position == 0)
+            {
+                head = head.Next;
+            }
+
+            return removed;
+
         }
+
     }
 }

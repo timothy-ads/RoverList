@@ -1,0 +1,7 @@
+C:\Users\noelc\OneDrive\Documents\Github\RoverList\RoverList\bin\Debug\RoverList.exe.config
+C:\Users\noelc\OneDrive\Documents\Github\RoverList\RoverList\bin\Debug\RoverList.exe
+C:\Users\noelc\OneDrive\Documents\Github\RoverList\RoverList\bin\Debug\RoverList.pdb
+C:\Users\noelc\OneDrive\Documents\Github\RoverList\RoverList\obj\Debug\RoverList.csprojAssemblyReference.cache
+C:\Users\noelc\OneDrive\Documents\Github\RoverList\RoverList\obj\Debug\RoverList.csproj.CoreCompileInputs.cache
+C:\Users\noelc\OneDrive\Documents\Github\RoverList\RoverList\obj\Debug\RoverList.exe
+C:\Users\noelc\OneDrive\Documents\Github\RoverList\RoverList\obj\Debug\RoverList.pdb
